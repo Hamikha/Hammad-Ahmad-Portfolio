@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Protfolio</title>
+    <script src="https://kit.fontawesome.com/50868481c2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,
+700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<style type="text/css">
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/bg_imagejpg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative
+   
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 200px;
+    margin-left: -50px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 10%;
+    font-size: 30px;
+
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #ff004f;
+}
+
+/*-------------about--------------*/
+#about{
+    padding: 80px  0px;
+    color: #ababab;
+
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+    background: #333; 
+    padding: 20px;  
+    border-radius: 15px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin: 10px; /* Adjust values as needed */
+}
+
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:#ff04ff ;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color : #b54769 ;
+    font-size: 18px;
+    font-weight: bolder;
+    
+}
+
+.tab-contents {
+    display: none;
+    background: #333; 
+    padding: 20px; 
+    font-size: 16px; 
+    font-weight: 400; 
+    border-radius: 15px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff; 
+    line-height: 1.6; 
+    margin: 10px; 
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+/*.........................services -------------*/
+#services{
+    padding: 30px 0;
+
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #b54769;
+    transform: translateY(-10px);
+
+}
+
+/*.........................Portfolio -------------*/
+
+#portfolio{
+    padding: 50px 0;
+
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width:100% ;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6) , #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #ff004f;
+}
+/*---------------------Contact --------------*/
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+
+}
+.contact-left p  i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 13px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+
+.contact-right form{
+    width: 100%;
+
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background-color: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ff004f;
+}
+
+nav .fa-solid{
+    display: none;
+}
+
+/*----------------Css for small screen -------*/
+@media only screen and (max-width : 600px){
+    #header{
+        background-image: url(Images/bg_imagejpg.jpg);
+        background-size: cover;
+        background-position:  center;
+    }
+    
+        .header-text{
+            margin-top: 50%;
+            font-size: 16px;
+        }
+        .header-text h1{
+            font-size: 30px;
+        }
+
+        nav .fa-solid{
+            display: block;
+            font-size: 35px;
+        }
+
+        nav ul {
+            background: #ff004f;
+            position: fixed;
+            top: 0;
+            right: -200px;
+            width: 200px;
+            height: 100vh;
+            padding-top: 50px;
+            z-index: 2;
+            transition: right 0.5s ;
+
+        }
+        nav ul li{
+            display: block;
+            margin: 25px; 
+        }
+
+        nav ul .fa-solid{
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            cursor: pointer;
+        }
+
+        nav .fa-solid{
+            cursor: po;
+        }
+
+        .subtitle{
+            font-size: 40px;
+        }
+
+        .about-col-1 , .about-col-2{
+            flex-basis: 100%;
+
+        }
+
+        .about-col-1{
+            margin-bottom: 30px;
+        }
+
+        .about-col-2{
+            font-size: 14px;
+        }
+        .tab-links{
+            font-size: 16px;
+            margin-right: 20px;
+        }
+
+        .contact-left,.contact-right{
+            flex-basis: 100%;
+        }
+
+        .copyright{
+            font-size: 14px;
+        }
+}
+
+</style>
+</head>
+<body>
+    <div id="header">
+
+        <div class="container">
+            <nav>
+                <img src="Images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Protfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div>
+            </div>
+            <div class="header-text">
+                <p>Machine Learnig/Deep Learning Engineer</p>
+                <h1>Hi, I'm <span>Hammad  Ahmad</span> <br> From Pakistan</h1>
+            </div>
+        </div>
+    </div>
+
+    <!---------------about---------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/image-2.png" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Thank you so much for taking the time to explore my portfolio!
+                         I'm currently an undergraduate student at UET Peshawar,
+                          where I've been fortunate to maintain a CGPA 
+                          of 3.83. Alongside my academic journey, I've 
+                          delved into the fascinating world of machine 
+                          learning through Coursera, completing a specialization 
+                          guided by the renowned Andrew Ng. Currently, I'm 
+                          engrossed in deepening my understanding of artificial 
+                          intelligence with Andrew Ng's deep learning specialization on 
+                          Coursera. Beyond my studies, you'll find me 
+                          immersed in the pages of captivating books or
+                           engaging in online gaming adventures like 
+                           PUBG during my free time. I'm passionate 
+                           about the endless possibilities that 
+                           technology holds and always excited to 
+                           learn more in this ever-evolving field.
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links " onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab " id="skills">
+                            <ul>
+                                <li><span>Programming</span> <br> C/C++ <br>MATLAB <br>Python <br>JavaScript </li>
+                                <li><span>Machine Learning</span>  <br> Supervised Learning <br> Unsupervised Learning <br> Reinforcement Learning</li>
+                                <li><span>Deep Learning</span> <br> Convolutional Neural Networks (CNNs) <br> Transfer Learning in Deep Learning <br> Hyperparameter Tuning in Deep Learning <br> Computer Vision Applications</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021 - Current</span> <br> Undergraduate Student at UET Peshawar</li>
+                                <li><span>2018 - 2020</span>  <br> Student at Quaid-e-Azam College Swabi</li>
+                                <li><span>2016 - 2018</span>  <br> Student at Govt High School Tano Swabi</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2021 - Current</span> <br> Undergraduate Student at UET Peshawar</li>
+                                <li><span>2018 - 2020</span>  <br> Student at Quaid-e-Azam College Swabi</li>
+                                <li><span>2016 - 2018</span>  <br> Student at Govt High School Tano Swabi</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------Services---------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Machine Learning Services</h2>
+                    <ul>
+                        <li>Supervised learning model development and deployment.</li>
+                        <li>Unsupervised learning solutions for data analysis and pattern recognition.</li>
+                        <li>Reinforcement learning applications for decision-making systems.</li>
+                    </ul>
+                    <a href="http://">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-figma"></i>
+                    <h2>Deep Learning Solutions</h2>
+                    <ul>
+                        <li>Development of deep neural networks for various applications.</li>
+                        <li>Convolutional Neural Network (CNN) design for image recognition tasks.</li>
+                        <li>Transfer learning techniques for leveraging pre-trained models.</li>
+                        <li>Implementation of data augmentation for enhanced model training and generalization.</li>
+                    </ul>
+                    <a href="http://">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Project Management</h2>
+                    <ul>
+                        <li>Managing end-to-end project development life cycle.</li>
+                        <li>Collaborating with cross-functional teams for successful project delivery.</li>
+                    </ul>
+                    <a href="http://">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <h2>Computer Vision Services</h2>
+                    <ul>
+                        <li>Image and video analysis using computer vision algorithms.</li>
+                        <li>Object detection and tracking in visual data.</li>
+                        <li>Implementation of computer vision applications.</li>
+                    </ul>
+                    <a href="http://">Learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!---------------Portfolio---------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/work-1.png" >
+                    <div class="layer">
+                        <h3>Creative Text Generation with LLMs</h3>
+                        <p> Independently explored and experimented with various language models.
+                             Leveraged techniques such as transformer-based architectures (e.g., GPT-3, BERT) to generate 
+                            imaginative and contextually relevant text.
+                             Achieved creative outputs in the form of poems, stories, Code, and more</p>
+                            <a href="https://github.com/Hamikha/Fine-Tune-Meta-Llama-Models"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/work-2.png" >
+                    <div class="layer">
+                        <h3>Chatbot Development using NLP Techniques</h3>
+                        <p> Independently designed and implemented a robust chatbot.
+                            Leveraged NLP techniques to enhance user interactions.
+                            Successfully deployed the chatbot, allowing seamless communication with users.</p>
+                            <a href="https://github.com/Hamikha/FineTuneBERT-Tasks"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/work-3.png" >
+                    <div class="layer">
+                        <h3>Image Classification using CNN </h3>
+                        <p>Implemented a Convolutional Neural Network (CNN) for image recognition,
+                             achieving state-of-the-art accuracy on the CIFAR-10 dataset. The model showcases 
+                            proficiency in deep learning and computer vision.</p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-------------------Contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i> hamikhan273@gmail.com</p>
+                    <p> <i class="fa-solid fa-square-phone-flip"></i> 03080468982</p>
+                    <div class="social-icons">
+                        <a href="https://web.facebook.com/profile.php?id=100070317048456"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/hamikhan270/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/hammad-ahmad-b91ba0247/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Hamikha"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="Images/Hammad's Resume.pdf" download class="btn btn2">Download Cv</a>
+                </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright ©  Hammad Ahmad <i class="fa-solid fa-heart"></i>.</p>
+        </div>
+    </div>
+</body>
+
+</html>
